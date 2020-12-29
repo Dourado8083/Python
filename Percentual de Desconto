@@ -1,0 +1,7 @@
+preço=int(input("Digite um valor:"))
+per_desconto=int(input("Digite o valor do desconto:"))
+novoPreco = preço - ((preço*per_desconto)/100)
+desconto = preço - novoPreco
+
+print ("Preço com desconto: R$", novoPreco)
+print ("Desconto de: R$", desconto)
