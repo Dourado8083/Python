@@ -1,0 +1,7 @@
+num =(int(input("Digite um numero:")))
+doblo = num + num #ou num * 2
+triple = num + num + num # num * 3
+raiz = num ** (1/2) 
+print("o doblo de {} vale {}".format(num,doblo))
+print("o triplo de {} é de {}.".format(num,triple))
+print("a raiz de {} é de {:.2f}".format(num,raiz)) #verificar o format {:.2f}
