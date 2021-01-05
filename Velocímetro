@@ -1,0 +1,6 @@
+velocidade=(float(input("Qual a velocidade atual do carro:")))
+if velocidade > 120:
+    print("MULTADO!,Você excedeu o limite permitido que é de 120km/h")
+    multa = (velocidade - 120) * 45
+    #Esse 45 é o valor em R$ ,preço para aplicar junto com a multa.
+    print("você deve pagar uma multa de R${:.2f}".format(multa))
