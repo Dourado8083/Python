@@ -1,0 +1,5 @@
+sala = float(input("Digite o seu salarial atual:R$"))
+des = float(input("Digite o valor de desconto:"))
+cal = sala + (sala * des/100) 
+rea = cal + sala
+print("o salario é {:.2f} ,com o reajuste de {:.2f}, ficou {:.2f}".format(sala,des,rea))
