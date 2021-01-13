@@ -1,0 +1,14 @@
+# a² = b² + c²----------------------------
+#----Pitagoras ---------------------------
+#----Maniera Matemática de Fazer ---------
+cato =float(input("Digite do cateto oposto:"))
+cata = float(input("Digite do cateto adjacente:"))
+hipo = (cato ** 2 + cata ** 2) ** (1/2) 
+print("O valor da hipotenusa é de {:.2f}".format(hipo))
+#----------------------------------------------
+#----Outra Forma de Fazer --------------------
+from math import hypot
+cato = float(input("Digite do cateto oposto:"))
+cata = float(input("Digite do cateto adjacente:"))
+hipo = hypot(cato,cata)
+print("A hipotenusa vai medir{}".format(hipo))
