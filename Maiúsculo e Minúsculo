@@ -1,0 +1,3 @@
+nome = str(input("Digite um nome:"))
+print("O seu nome em maiúsculas é {}".format(nome.upper()))
+print("O seu nome em minúsculas é {}".format(nome.lower()))
