@@ -1,0 +1,2 @@
+nome = str(input("Digite um nome:"))
+print("O seu nome tem ao todo {} letras.".format(len(nome)))
