@@ -1,0 +1,17 @@
+print("-" * 26)
+num = int(input("Digite um número: "))
+print("-" * 26)
+contador = 0
+
+for i in range(1, num + 1):
+    if num % i == 0:
+        contador += 1
+print("-" * 26)
+print("O número {} foi divisível {} vezes!".format(num, contador))
+print("-" * 26)
+
+if contador == 2:
+    print("O número é primo")
+else:
+    print("O número não é primo")
+    print("-" * 26)
