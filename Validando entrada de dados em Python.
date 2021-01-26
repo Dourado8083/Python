@@ -1,0 +1,9 @@
+def n(txt):
+	n = str(input(txt))
+	if n.isnumeric():
+		print('vc escreveu o numero', n)
+	else:
+		print('erro digite um numero inteiro aceitavel')
+	
+	
+n('digite um numero: ')
