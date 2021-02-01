@@ -1,0 +1,16 @@
+print ("Digite 1 para Suco") 
+print ("Digite 2 para Refrigerante ")
+print("Digite 3 para Àgua")
+print("Digite 4 para fechar o programa")
+opção = int(input("Digite uma opção:"))
+if opção == 1:
+    print("Suco")
+elif opção == 2:
+    print("Refrigerante")
+elif opção == 3:
+    print("Àgua")
+elif opção == 4:
+    print("O programa foi encerrado")
+    exit()
+else:
+    print("Opção inválida")
