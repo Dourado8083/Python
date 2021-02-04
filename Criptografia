@@ -1,0 +1,41 @@
+def criptografar():
+	frase_criptografada  = ''
+	frase = input("Digite a frase a ser criptografada: ")
+
+	for valor in frase:
+		inteiroDaDivisão = str(ord(valor) // 47)
+		moduloDaDivisao = str(ord(valor) % 47)
+
+		if (len(moduloDaDivisao) == 1):
+			moduloDaDivisao = "0"+ moduloDaDivisao
+
+		frase_criptografada += str(inteiroDaDivisão)+str(moduloDaDivisao)
+
+	print("A frase criptografada é: ")
+	print(frase_criptografada)
+
+
+def descriptografar():
+	frase = input("Digite a frase a ser descriptografada: ")
+	frase_descriptografada = ''
+
+	n = 3
+	chunks = [frase[i:i+n] for i in range(0, len(frase), n)]
+	for i in chunks:
+		primeiro_digito = int(i[0])
+		segundo_digito = str(i[1])
+		terceiro_digito = str(i[2])
+
+		valor = primeiro_digito * 47 + int((segundo_digito+terceiro_digito))
+		letra = chr(valor)
+		frase_descriptografada += letra
+
+	print("A frase descriptografada é: ")
+	print(frase_descriptografada)
+
+
+opcao = input("Digite CRIPTOGRAFAR ou DESCRIPTOGRAFAR: ").upper()
+if(opcao == "CRIPTOGRAFAR"):
+	criptografar()
+elif(opcao == "DESCRIPTOGRAFAR"):
+	descriptografar()
