@@ -1,0 +1,19 @@
+lista = ("lapis",2.50,
+"Caderno",23.00,
+"Estojo",10.00,
+"Mochila",150.00,
+"Garrafa",20.00,
+"Caneta",1.40,
+"Compasso",15.00,
+"Lapiseira",35.00,
+"Borracha",2.00,
+"Pasta",20.00)
+print("-" * 40)
+print(f'{"Listagem de Preços:^40"}')
+print("-" * 40)
+for pos in range (0, len(lista)):
+    if pos % 2 == 0:
+       print(f'{lista[pos]:.<30}',end ='')
+ else:
+     print(f'{lista[pos]:>7.2f}')
+print("-" * 40)
