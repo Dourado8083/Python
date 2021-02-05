@@ -1,0 +1,9 @@
+fra = str(input("Digite sua frase:")).strip() .upper()
+palavras = fra.split()
+junto = ''.join(palavras)
+inverso = junto[::-1]
+print("O inverso de {} é {}".format(junto,inverso))
+if inverso == junto: 
+     print("temos um Palíndromo!")
+else:
+    print("A frase digitida não é um Palíndromo!") 
