@@ -1,0 +1,11 @@
+print("-" * 17)
+nome =(input("Digite algo:"))
+print("O tipo primitivo é",type(nome))
+print("Só tem espaço?",nome.isspace())
+print("Só tem letra maiscula",nome.isupper())
+print("Só tem letra minuscúla",nome.islower())
+print("é um número",nome.isnumeric())
+print("é alphabetico",nome.isalpha())
+print("é alphanúmerico",nome.isalnum())
+print("é capitalizada",nome.istitle()) #mistura de minuscúla e maiscula
+print("-" * 17)
