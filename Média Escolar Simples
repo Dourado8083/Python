@@ -1,0 +1,4 @@
+nota = float(input("Digite uma nota:"))
+nota2 = float(input("Digite outra nota"))
+resultado = (nota + nota2) / 2
+print(resultado)
