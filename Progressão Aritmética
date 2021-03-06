@@ -1,0 +1,5 @@
+pt = int(input('Digite o primeiro termo: '))
+ra = int(input('Digite a razao: '))
+
+for c in range(pt, pt+10*ra, ra):
+    print(c)
