@@ -1,0 +1,35 @@
+while True:
+	nome = input("Digite o nome do aluno ou digite sair: ")
+	if(nome=="sair"):
+		break;
+	qtd_notas = 0
+	soma_notas = 0
+	notas = []
+
+	while qtd_notas <2 or qtd_notas >4:
+		try:
+			qtd_notas = int(input("Deseja cadastrar quantas notas? 2, 3 ou 4? "))
+		except ValueError:
+			print("Valor inválido.")
+
+	for i in range(1,qtd_notas+1):
+		nota = None
+		while nota == None:
+			try:
+				nota = float(input(f"Digite a {i}ª nota: "))
+			except ValueError:
+				print("Nota inválida")
+		notas.append(nota)
+		soma_notas +=nota
+
+	media = soma_notas / qtd_notas
+	print(f"\nNome: {nome}")
+	print(f"\nMédia: {media}")
+
+	if(media>=7):
+		print("O aluno foi aprovado!")
+	elif(media<4):
+		print("Aluno reprovado.")
+	else:
+		print("Aluno foi para exame")
+	print("-------------------------------------------")
