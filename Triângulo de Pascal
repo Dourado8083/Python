@@ -1,0 +1,36 @@
+try:
+	grau = int(input("Digite um número natural para criação do Triângulo de Pascal: "))
+
+	# Número negativo? Se sim, você cometeu um erro.
+	if(grau<0):
+		raise ValueError
+
+	triangulo = []
+
+	for linha in range(grau):
+		newLinha = []
+
+		for coluna in range(linha+1):
+
+			#  Realiza o append do valor: caso pontas 1 senão valor dinamico
+			if(coluna == 0):
+				newLinha.append(1)
+			elif(coluna ==linha):
+				newLinha.append(1)
+			else:
+				elemento_superior = triangulo[linha-1][coluna]
+				elemento_superior_a_esquerda = triangulo[linha-1][coluna-1]
+				elemento_atual  = elemento_superior + elemento_superior_a_esquerda
+				newLinha.append(elemento_atual)
+			
+			#  Mostra na tela o número correspondente, calculando dinamicamente a quantidade de espaços colocada após sua visualização
+			spaces_between = ' ' * (10 - len(str(newLinha[coluna])))
+			print(f"{newLinha[coluna]} {spaces_between}", end="")
+
+		#  Encerra a visualização da linha atual
+		print("")
+
+		#  Salva a nova linha  na matriz do Triângulo, caso seja necessário uso futuro.
+		triangulo.append(newLinha)
+except ValueError: 
+	print("Erro, você digitou um caracter ou um número inválido. Tente novamente em alguns instantes.")
