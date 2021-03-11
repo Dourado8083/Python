@@ -1,0 +1,26 @@
+def floatValido(mensagem):
+	valor = None
+	while True:
+		try:
+			valor = float(input(mensagem))
+			return valor
+		except ValueError:
+			print("Valor inválido")
+
+x = floatValido("Digite o valor da abscissa [x]: ")
+y = floatValido("Digite o valor da ordenada [y]: ")
+
+if(x==0 and y==0):
+	print(f"Essa coordenada está na origem, ou seja o ponto central: ({x},{y})")
+elif(x==0):
+	print(f"Essa coordenada está no eixo das ordenadas: ({x},{y})")
+elif(y==0):
+	print(f"Essa coordenada está no eixo das abscissas: ({x},{y})")
+elif(x>0 and y>0):
+	print(f"Essa coordenada está no 1º quadrante: ({x},{y})")
+elif(x<0 and y>0):
+	print(f"Essa coordenada está no 2º quadrante: ({x},{y})")
+elif(x<0 and y<0):
+	print(f"Essa coordenada está no 3º quadrante: ({x},{y})")
+elif(x>0 and y<0):
+	print(f"Essa coordenada está no 4º quadrante: ({x},{y})")
