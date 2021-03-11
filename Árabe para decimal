@@ -1,0 +1,56 @@
+try:
+	print("Esse conversor converte números arábicos para romanos!")
+	numero = input("Digite um número inteiro de 1 até 3999 para conversão: ")
+
+	#Verifica se o número digitado está compreendido nos padrões pedidos
+	if(int(numero) <=0 or int(numero)>3999):
+		raise ValueError
+
+	romano = ""
+	for casa in range(len(numero),0,-1):
+		#  Converte a casa do milhar
+		if casa == 4:
+			valor = int(numero[-4])
+			if(valor>0 and valor <=3):
+				romano+=f'{"M"*(valor)}'
+
+		#  Converte a casa da centena
+		if casa == 3:
+			valor = int(numero[-3])
+			if(valor>0 and valor <=3):
+				romano+=f'{"C"*valor}'
+			elif(valor==4):
+				romano+="CD"
+			elif(valor>=5 and valor <=8):
+				romano+=f'D{"C"*(valor-5)}'
+			elif(valor==9):
+				romano+="CM"
+
+		# Converte a casa da dezena
+		if casa == 2:
+			valor = int(numero[-2])
+			if(valor>0 and valor <=3):
+				romano+=f'{"X"*valor}'
+			elif(valor==4):
+				romano+="XL"
+			elif(valor>=5 and valor <=8):
+				romano+=f'L{"X"*(valor-5)}'
+			elif(valor==9):
+				romano+="XC"
+
+		#  Converte a casa da Unidade
+		if casa == 1:
+			valor = int(numero[-1])
+			if(valor>0 and valor<=3):
+				romano+=f'{"I"*valor}'
+			elif(valor == 4):
+				romano+=f"IV"
+			elif(valor>=5 and valor <=8):
+				romano+=f'V{"I"*(valor-5)}'
+			elif(valor==9):
+				romano+="IX"
+
+	print(romano)
+
+except ValueError:
+	print("Você digitou um número inválido, tente novamente em alguns instantes.")
