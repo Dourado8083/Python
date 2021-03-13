@@ -1,0 +1,47 @@
+codigo = 0
+opcoes = {
+	1: "dolar",
+	2: "euro",
+	3: "real",
+	4: "Encerrar programa"
+}
+
+def mostrarOpcoes(minValue, maxValue, dicionario):
+	print("COD   VALOR")
+	for i in range(minValue, maxValue+1):
+		print(f"  {i}   {dicionario[i]}")
+
+def receberInteiroEntre(minValue, maxValue, mensagem):
+	value = minValue-1
+	while value<minValue or value>maxValue:
+		try:
+			value = int(input(mensagem))
+		except ValueError:
+			print("Número ou caractere inválido")
+	return value
+
+def receberNumeroFloat(mensagem):
+	value = None
+	while value == None:
+		try:
+			value = float(input(mensagem))
+			return value
+		except ValueError:
+			print("Valor Inválido")
+
+
+while True:
+	mostrarOpcoes(1, 4, opcoes)
+	codigo = receberInteiroEntre(1,4, "Escolha a moeda atual: ")
+	if (codigo == 4):
+		break
+
+	moeda_atual = opcoes[codigo]
+
+	codigo = receberInteiroEntre(1,4, "Escolha a moeda de destino: ")
+	if (codigo == 4):
+		break
+	moeda_destino = opcoes[codigo]
+
+	valor_atual = receberNumeroFloat(f"Quanto dinheiro você tem em {moeda_atual}: ")
+	taxa = receberNumeroFloat(f"Atualmente, quanto custa um {moeda_destino} na moeda atual: ")
