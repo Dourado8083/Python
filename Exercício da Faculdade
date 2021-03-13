@@ -1,0 +1,79 @@
+#Desenvolva um programa que receba nome, idade e salário digitados pelo usuário e apresente no final
+#quantas dessas idades estão entre 15 e 17 anos, quantas são maiores de 21 anos, quantos salários estão
+#entre R$1.500,00 e R$2.000,00, quantos estão acima de R$3.500,00 e qual é o maior e o menor salário
+#digitado. (utilizar laço de repetição com opção de saída do sistema).
+anali_pessoas = 0
+jovem_15_17 = 0
+adultos_21 = 0
+sal_1500_2000 = 0
+sal_3500 = 0
+sal_mini = 0
+sal_max3 = 0
+continuar = ''
+def valido(mensagem):
+	valor = None
+	while True:
+
+			valor = float(input(mensagem))
+
+			if(valor<522.5):
+				print("é freelancer? ")
+    else:
+ return valor
+ValueError:
+print("Salário inválido")
+
+def inteiro(mensagem):
+	valor = None
+	while True:
+		try:
+			valor = int(input(mensagem))
+
+			if(valor<14):
+				print("jovem aprendiz?")
+			elif(valor>120):
+				print("Já é aposentado")
+			else:
+				break;
+		except ValueError:
+			print("Idade inválida")
+	return valor
+
+
+while (anali_pessoas == 0 or continuar != "N"):
+	nome = input("Digite o nome do funcionário: ")
+	salario = floatValido(f"Digite o salário de {nome}: ")
+	idade = inteiro(f"Digite a idade de {nome}: ")
+
+	if(idade>=15 and idade<=17):
+		jovem_15_17+=1
+	elif(idade>21):
+		adultos_21+=1
+
+	if(salario >=1500 and salario <=2000):
+		sal_1500_2000+=1
+	elif(salario>3500):
+		sal_3500+=1
+
+	#  Caso o salário seja menor ou maior do que os armazenados
+	sal_mini = salario if salario < sal_mini else sal_mini
+	sal_max3 = salario if salario > sal_max3 else sal_max3
+
+	# Garantir que o sal_mini e o sal_max3 são válidos
+	sal_mini = salario if anali_pessoas == 0 else sal_mini
+	sal_max3 = salario if anali_pessoas == 0 else sal_max3
+
+	anali_pessoas+=1
+
+	continuar = ''
+	while continuar!="N" and continuar!="S":
+		continuar = input("Deseja cadastrar mais um funcionário [S/N]: ")
+
+
+print(f"Jovens de 15 a 17 anos:- {jovem_15_17}")
+print(f"Adultos - {adultos_21}")
+print(f"Salários entre R$1500 e R$2000 - {sal_1500_2000}")
+print(f"Salários de 3500 para cima: - {sal_3500}")
+print(f"Salário Baixo: - {sal_mini}")
+print(f"Salário alto: - {sal_max3}")
+print(f"Vericação de Pessoas: - {anali_pessoas}")
