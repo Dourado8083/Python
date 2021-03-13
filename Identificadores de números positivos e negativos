@@ -1,0 +1,18 @@
+#Construa um programa que, para um grupo de 50 valores inteiros, determine:
+#a) A soma dos números positivos;
+#b) A quantidade de valores negativos;
+try:
+	Valor_posi = 0
+	Valor_negati = 0
+	for i in range(1, 51):
+		num = int(input(f"Digite o {i}º número: "))
+		if(num>0):
+			Valor_posi+= num
+		elif (num < 0):
+			Valor_negati+=1
+
+	print("Resultados....................................")
+	print(f"Você digitou {Valor_negati} números negativos")
+	print(f"A soma dos números positivos é {Valor_posi}")
+   except ValueError:
+	print("Você digitou um número ou caractere inválido.")
