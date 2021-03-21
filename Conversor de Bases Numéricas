@@ -1,0 +1,37 @@
+from time import sleep
+
+#dicionario de cores e variaveis
+dic = {
+    'amarelo': '\033[;33m',
+    'ciano': '\033[4;36m',
+    'vermelho': '\033[1;31m',
+    'fim': '\033[m'
+}
+num = int(input('Dígite um número inteiro: '))
+
+#prints e inputs
+print('''{}Escolha uma das bases para converter:
+[ 1 ] Converter para binário.
+[ 2 ] Converter para octal.
+[ 3 ] Converter para hexadecimal.{}'''.format(dic['amarelo'], dic['fim']))
+opc = int(input('{}Sua opção: {}'.format(dic['amarelo'], dic['fim'])))
+
+#IFs
+if opc == 1:
+    opc = str('binário')
+    res = bin(num)[2:]
+elif opc == 2:
+    opc = str('octal')
+    res = oct(num)[2:]
+elif opc != 1 or opc != 2 or opc != 3:
+    print('{}Opção ínvalida, CONSIDERANDO ENCERRAMENTO DO PROGRAMA{}'.format(dic['vermelho'], dic['fim']))
+    opc = 0
+    if opc == 0:
+        quit()
+else:
+    opc = str('hexadecimal')
+    res = hex(num).upper()[2:]
+#final
+print('{}PROCESSANDO...{}'.format(dic['vermelho'], dic['fim']))
+sleep(3)
+print('{}{} Convertido em {} é igual a {}{}{}'.format(dic['ciano'], num, opc, dic['vermelho'], res, dic['fim']))
