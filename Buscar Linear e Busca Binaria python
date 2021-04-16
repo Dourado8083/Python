@@ -1,0 +1,16 @@
+def buscaBinaria(v,valor):
+esquerda =int(0)
+direita = int(len(v)-1)
+while(esquerda<=direita):
+  meio=int(((esquerda+direita)/2)//1)
+  if(v[meio]==valor):
+      return meio
+  if(v[meio]>valor):
+     direita=meio-1
+  else:
+     esquerda=meio+1
+    return -1 
+v = [1,2,3,4,5,6,7,8,9,10]
+print(buscaLinear(v,7))
+valor = 9
+print(buscaBinaria(v,valor))
