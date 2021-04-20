@@ -1,0 +1,5 @@
+import webbrower
+
+url = 'https://www.youtube.com/watch?v=x5Cb7vFCnMc&ab_channel=Anjunadeep'
+
+webbrower.open(url)
