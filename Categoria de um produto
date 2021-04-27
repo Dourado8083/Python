@@ -1,0 +1,19 @@
+aux = 0
+cat = int (input("Entre com a categoria do produto: "))
+
+if cat == 1:
+    valor = 10.00
+elif cat == 2:
+    valor = 15.00
+elif cat == 3:
+    valor = 19.00
+elif cat == 4:
+    valor = 23.00
+elif cat == 5:
+    valor = 27.00
+else:
+    print ("Opção invalida .... Digite novamente... ")
+    aux = 1
+
+if aux == 0:
+    print (f" Categoria: {cat} - Valor R$:{valor:.2f}")
