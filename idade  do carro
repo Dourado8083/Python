@@ -1,0 +1,11 @@
+anoVeiculo = input("Entre com o ano do veiculo: ")
+
+# SEM BUG DO MILENIO
+if (len(anoVeiculo) == 4):
+    conIdade = int (anoVeiculo)
+    idade = 2021-conIdade
+
+if (idade <= 3):
+    print ("Seu carro é novo")
+else:
+    print ("Seu carro é velho")
