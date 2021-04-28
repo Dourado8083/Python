@@ -1,0 +1,29 @@
+num1 = float (input("Entre com o 1º numero: "))
+num2 = float (input("Entre com o 2º numero: "))
+
+print ("-------------------------------------")
+print ("|      CALCULADORA PYTHON       |")
+print ("-------------------------------------")
+print ("| 1 - Soma (+)                      |")
+print ("| 2 - Subtração (-)                 |")
+print ("| 3 - Multiplicação (*)             |")
+print ("| 4 - Divisão (/)                   |")
+print ("-------------------------------------")
+
+opc = int (input(" Digite a opção desejada: "))
+print ("-------------------------------------")
+
+if (opc == 1):
+    resultado = num1 + num2
+    print (f"{num1:.2f} + {num2:.2f} = {resultado:.2f}")
+elif (opc == 2):
+    resultado = num1 - num2
+    print (f"{num1:.2f} - {num2:.2f} = {resultado:.2f}")
+elif (opc == 3):
+    resultado = num1 * num2
+    print (f"{num1:.2f} * {num2:.2f} = {resultado:.2f}")
+elif (opc == 4):
+    resultado = num1 / num2
+    print (f"{num1:.2f} / {num2:.2f} = {resultado:.2f}")
+else:
+    print ("OPÇÃO INVALIDA - ENTRE NOVAMENTE")
