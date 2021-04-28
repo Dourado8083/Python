@@ -1,0 +1,5 @@
+print ("Eq: a**b/c")
+a = int (input ("Entre com o valor de a [int]: "))
+b = int (input ("Entre com o valor de b [int]: "))
+c = int (input ("Entre com o valor de c [int]: "))
+print (a**b/c)
