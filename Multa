@@ -1,0 +1,20 @@
+velocidade = int (input("Entre com a velocidade [km/h]: "))
+limiteVelocidade = 80
+
+if (velocidade > limiteVelocidade):
+    print ("PARABENS - Você foi multado !!!! kkkkkkkkk")
+
+    valorMulta = (velocidade - limiteVelocidade)*5.00
+
+    print (f"Valor da Multa: R${valorMulta:.2f}")
+    
+    opCPF = input("Deseja colocar CPF na nota? Digite S para Sim ou N para não:" )
+
+    if (opCPF == 'S' or opCPF == 's'):
+        CPF = input ("Entre com o CPF: ")
+        print ("Obrigado volte sempre... DETRAN te aguarda ...")
+    else:
+        print ("Obrigado volte sempre... DETRAN te aguarda ...")
+
+else:
+    print ("Você não foi multado. Na proxima me aguarde... Ass: Radar")
