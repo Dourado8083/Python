@@ -1,0 +1,7 @@
+a = int(input("Digite um valor:"))
+b = int(input("Digite um valor:"))
+c = int(input("Digite um valor:"))
+AB = 0
+ 
+AB = (a+b+abs(a-b)) / 2
+print(AB ,"é o maior.")
