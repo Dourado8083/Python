@@ -1,0 +1,11 @@
+carrinho = []
+produto = ''
+
+while produto != 'sair':
+    print("Adicone um produto na lista ou digite sair para encerrar programa:")
+    produto = input()
+    if produto != 'sair':
+        carrinho.append(produto)
+for produto in carrinho:
+    #for produto in enumerate(carrinho) Com númeração
+    print(produto)
